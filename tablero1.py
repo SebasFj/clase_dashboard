@@ -4,6 +4,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 st.set_page_config(
     layout="centered",
     page_title="Talento Tech",
@@ -11,6 +12,9 @@ st.set_page_config(
 
 if "img" not in st.session_state:
     st.session_state.img = True
+    
+if "boton_2" not in st.session_state:
+    st.session_state.boton_2 = False
 
 def print_campana(df):
     seleccion = st.session_state["select_box_campana"]
@@ -52,8 +56,6 @@ with steps[0]:
 with steps[1]:
     texto_boton_2 = "Mostrar texto" if not st.session_state.boton_2 else "Ocultar texto"
     st.button(texto_boton_2,on_click=btn2)
-    if "boton_2" not in st.session_state:
-        st.session_state.boton_2 = False
         texto_boton_2 = "Mostrar texto"
     if st.session_state.boton_2:
         st.write("Usted presionó el botón")
