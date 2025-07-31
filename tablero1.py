@@ -56,7 +56,6 @@ with steps[0]:
 with steps[1]:
     texto_boton_2 = "Mostrar texto" if not st.session_state.boton_2 else "Ocultar texto"
     st.button(texto_boton_2,on_click=btn2)
-        texto_boton_2 = "Mostrar texto"
     if st.session_state.boton_2:
         st.write("Usted presionó el botón")
 
